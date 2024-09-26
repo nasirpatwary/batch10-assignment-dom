@@ -1,7 +1,8 @@
 document.getElementById("donate-btn-1").addEventListener("click", function () {
     const inputDonate = addBalanceDonate("input-donate");
-    if (isNaN(inputDonate)) {
-        alert("Please Provide the number..!");
+    if (isNaN(inputDonate) || inputDonate <= 0) {
+        alert("Invalid Donation Amout");
+        document.getElementById("input-donate").vlaue = ""
         return;
     }
     const addMoney = addMoneyDonate("add-balance");
